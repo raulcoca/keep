@@ -26,6 +26,13 @@ const mockCheck: Check[] = [
 
 
 const App = (): JSX.Element => {
+
+  console.log(import.meta.env.VITE_SOME_KEY);
+  console.log(import.meta.env.db_PASSWORD);
+
+
+
+
   const [checks, setChecks] = useState(mockCheck)
   const [filterSelected, setFilterSelected] = useState<FilterValue>(TODO_FILTERS.ALL)
 

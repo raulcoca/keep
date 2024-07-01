@@ -6,7 +6,7 @@ interface Props {
 }
 
 
-export const Header: React.FC<Props> = ({ onAddCheck }) => {
+export const Header = ({ onAddCheck }: Props) => {
     return (
         <header className="header">
             <h1>Mis tareas</h1>

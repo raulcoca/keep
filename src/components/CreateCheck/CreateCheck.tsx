@@ -7,7 +7,7 @@ interface Props {
 
 
 
-export const CreateCheck: React.FC<Props> = ({ onAddCheck }) => {
+export const CreateCheck = ({ onAddCheck }: Props) => {
 
     const [inputValue, setInputValue] = useState('');
 

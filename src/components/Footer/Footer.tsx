@@ -9,16 +9,16 @@ interface Props {
     handleFilterChange: (filter: FilterValue) => void
 }
 
-export const Footer: React.FC<Props> = ({ onClearComplete, activeCount = 0, completedCount = 0, filterSelected, handleFilterChange}) => {
+export const Footer = ({ onClearComplete, activeCount = 0, completedCount = 0, filterSelected, handleFilterChange }: Props) => {
 
 
-    return(
+    return (
         <footer className='footer'>
             <span className='todo-count'>
                 {activeCount} checks pendientes
             </span>
 
-            <Filters filterSelected={filterSelected} onFilterChange={handleFilterChange}/>
+            <Filters filterSelected={filterSelected} onFilterChange={handleFilterChange} />
 
             {
                 completedCount > 0 && (

@@ -1,12 +1,12 @@
-import {Check as CheckT} from '../../types/Check'
+import { Check as CheckT } from '../../types/Check'
 
-interface props {
+interface Props {
     check: CheckT
     onRemoveCheck: (id: CheckT['id']) => void
     onToggleCompleted: (id: CheckT['id'], completed: CheckT['completed']) => void
 }
 
-export const Check: React.FC<props> = ({check, onRemoveCheck, onToggleCompleted}) => {
+export const Check = ({ check, onRemoveCheck, onToggleCompleted }: Props) => {
 
     const handleRemove = () => {
         onRemoveCheck(check.id)
@@ -17,11 +17,11 @@ export const Check: React.FC<props> = ({check, onRemoveCheck, onToggleCompleted}
 
     return (
         <div className="check">
-            <input 
-            className='toggle'
-            type="checkbox" 
-            checked={check.completed}
-            onChange={handleChangeCheckbox} 
+            <input
+                className='toggle'
+                type="checkbox"
+                checked={check.completed}
+                onChange={handleChangeCheckbox}
             />
             <label>{check.title}</label>
             <button

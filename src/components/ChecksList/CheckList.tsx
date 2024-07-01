@@ -7,7 +7,7 @@ interface Props {
     onToggleCompleted: (id: CheckT['id'], completed: CheckT['completed']) => void
 }
 
-export const CheckList: React.FC<Props> = ({ checks, onRemoveCheck, onToggleCompleted }) => {
+export const CheckList = ({ checks, onRemoveCheck, onToggleCompleted }: Props) => {
 
 
     return (
